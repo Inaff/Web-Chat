@@ -1,6 +1,6 @@
 About
 ------
-A simple chat program I made in for learning HTML/CSS/JavaScript/PHP years ago. Not meant to be used for seriously, as it has no security.
+A simple chat program I made for learning HTML/CSS/JavaScript/PHP years ago. Not meant to be used for seriously, as it has no security.
 
 License
 -------
