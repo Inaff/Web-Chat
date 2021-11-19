@@ -1,0 +1,20 @@
+--------
+FEATURES
+--------
+Download buttons?
+Japanese translation
+Pin Messages
+Notifications - Popping sound effect?
+Chat bottom attachment
+Download link history sidebar
+
+-------------
+IMPROVEMENTS
+-------------
+Replace @getimagesize with curl
+
+Replace HTML tags with abbreviations:
+	ifr		iframe
+	opt		option
+	tarea		textarea
+	hdr		header

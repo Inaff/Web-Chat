@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'font_headers';
+	src: url("/fonts/Infinity.ttf") format('truetype');
+} @font-face {
+	font-family: 'font_light';
+	src: url("/fonts/FolioLight.ttf") format('truetype'); }
+
+
+html {	
+	background: #076585;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #000, #982e39);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #000, #800000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ ...#FFF was the*/ }
+
+body { font: 100% 'font_light', sans-serif; }
+
+
+
+
+.glob_menu_wrap { 	background-color: rgba(0, 0, 0, 0.4);
+			font-family: palatino, serif; }
+
+	.MoTD { color: #eee; }
+
+
+button, input {	background-color: #fff; color: black;
+    			border: none; }
+	button:active, input:active { background-color: #10406f; color: white; }
+
+#usermsg:focus 	{ 	 border-color: #10406f; 
+					 box-shadow: 0 0 5px 3px #10406f; }
+
+#wrapper { 	box-shadow: 0 0 64px #444; 
+			background-color: rgba(255, 255, 255, 0.5); } 
+
+	#chatbox {     	background: #fff; // #aaa NM }
+
+		#submitmsg { 	font-family: "Times New Roman", Georgia, serif; }
+
+
+a { 	color: #2A5DB0; } /* https://gigaom.com/2009/07/09/when-it-comes-to-links-color-matters/ */
+
+.version { color: #aaa; }
+.version, .version_visited { text-decoration: none; }
+
+.logout { color: inherit; text-decoration: none;  }
+	.logout:visited { color: inherit; }
+
+
+/* 
+  * Login page / index.php 
+  */
+
+#loginform { 	font: 100% "font_light"; 
+			color: #662B39; 
+			background-color: rgba(255, 255, 255, 0.8); }
+
+.error { color: yellow; }

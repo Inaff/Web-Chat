@@ -1,0 +1,85 @@
+@font-face {
+	font-family: 'font_headers';
+	src: url("/fonts/Infinity.ttf") format('truetype');
+} @font-face {
+	font-family: 'font_light';
+	src: url("/fonts/FolioLight.ttf") format('truetype'); 
+} 
+
+
+html { 	background: url("/img/background/os_x/10-4_1600_c.png");
+		background-repeat: no-repeat;
+		background-size: cover; }
+
+@media (min-width: 1921px) { background: url("/img/background/os_x/10-4_2560_c.png"); }
+@media (min-width: 3840px) { background: url("/img/background/os_x/10-4_5120_c.png"); }
+
+body { font: 100% ".LucidaGrandeUI", "Lucida Grande", "Lucida sans unicode"; }
+
+
+
+.glob_menu_wrap { 	background-color: rgba(255, 255, 255, 0.7);
+				padding: 3px 0 0.5px 0; 
+				font-size: 90%; }
+			
+				.version, .version:visited	{ text-decoration: none; bottom: 0;
+									  color: #666; } 
+				.MoTD {	color: black; }
+
+
+#wrapper { 	box-shadow: 0 0 6px #888; 
+   			background-image: url("/img/texture/brushed_metal.png");
+			//background-size: 100% auto;
+		 } 
+
+	#chatbox {     	background: #fff; } /* #aaa NM */
+
+					.welcome { font-size: 90%; }
+
+
+a { 	color: #e194a0; } 
+a:visited { color: #dec0c6; }
+
+::selection {
+  background: #a9d1fd; /* WebKit/Blink Browsers */
+}
+
+ input {	background-color: #fff; color: black;
+    			border: none; }
+
+button, #submitmsg {  
+			text-decoration: none;
+			color: black;
+			font-size: 11px;
+			padding: 1px 7px;
+			border:1px solid #9C9C9C;
+			margin: 2px 2px;
+			display: inline-block;
+			background-image: -webkit-linear-gradient(
+			#ffffff 0%, #F6F6F6 	30%, 
+			#F3F3F3 45%, #EDEDED 	60%, 
+			#eeeeee 100%);
+			border-radius: 3px;
+			cursor: default;
+			box-shadow: 0px 0px 1px rgba(0,0,0,0.20);
+		}
+		button:active, #submitmsg:active {
+		 	border-color:#705ebb;
+			background-image:-webkit-linear-gradient(
+			#acc5e9 0%, 		#a3c0f2 18%, 
+			#61a0ed 39%,		#55a3f2 70%, 
+			#82c2f1 91.72%, 	#9AD2F2 100%); 
+			box-shadow: 0px 0px 1px rgba(0,0,0,0.65);		
+		}
+button::before { 	background-image:url("/img/gloss.png"); z-index: 9999;}
+
+
+
+#usermsg:focus 	{ 	 border-color: blue; 
+					 box-shadow: 0 0 5px 3px #a9d1fd; }
+
+
+
+	/* .welcome 	{ color: #5d0012; } */
+.logout 		{ color: #5d0012; text-decoration: none;  }
+.logout:visited 	{ color: #5d0012; }

@@ -1,0 +1,69 @@
+@font-face {
+	font-family: 'font_headers';
+	src: url("/fonts/Infinity.ttf") format('truetype');
+} @font-face {
+	font-family: 'font_light';
+	src: url("/fonts/FolioLight.ttf") format('truetype'); 
+} @font-face {
+	font-family: 'font_strange';
+	src: url("/fonts/MadokaRunes-2.0.ttf") format('truetype'); } /* /fonts/GD-MadoMaG-JA-OTF_REV001/GD-MadoMaruGoJA-Rev001.otf */
+
+
+html { background-color: #becc97; }
+
+body { font: 100% 'font_light', sans-serif; }
+
+
+
+.glob_menu_wrap { 	background-color: rgba(255, 255, 255, 0.88);
+				font-family: palatino, serif; }
+			
+				.MoTD {	color: black; 
+						font-family: 'font_strange';
+						font-weight: normal; }
+			
+						.MoTD:active {
+							font-family: inherit; }
+
+
+#wrapper { 	box-shadow: 0 0 6px #888; 
+			background-color: rgba(255, 255, 255, 0.8); } 
+
+	#chatbox {     	background: #fff; } /* #aaa NM */
+
+
+
+a { 	color: #e194a0; } 
+a:visited { color: #dec0c6; }
+
+::selection {
+  background: #ffe5ec; /* WebKit/Blink Browsers */
+}
+
+button, input {	background-color: #fff; color: black;
+    			border: none; }
+	button:active, input:active { background-color: #ffdbdb; color: white; }
+
+
+#usermsg:focus 	{ 	 border-color: #ffdbdb; 
+					 box-shadow: 0 0 5px 3px #ffdbdb; }
+
+
+
+.version, .version:visited	{ 	text-decoration: none; 
+						color: #bbb; } /* #ffdbdb */
+	/* .welcome 	{ color: #5d0012; } */
+.logout 		{ color: #5d0012; text-decoration: none;  }
+.logout:visited 	{ color: #5d0012; }
+
+
+
+/* 
+  * Login page / index.php 
+  */
+
+#loginform { 	font: 100% "font_light"; 
+			color: #662B39; 
+			background-color: rgba(255, 255, 255, 0.8); }
+
+.error { color: yellow; }

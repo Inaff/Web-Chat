@@ -1,0 +1,5 @@
+h1 { 	font: 1200% 'font_headers'; }
+
+#login_cont, form { max-width: 100%; }
+	p, input { font-size: 190%; }
+		p { color: #000; }

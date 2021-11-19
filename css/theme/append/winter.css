@@ -1,0 +1,27 @@
+.snow {
+  	height: 100vh;
+  	width: 100%;  bottom: 0;
+  	position: fixed;
+  	background-image: url("/img/winter/snow1.png"), url("/img/winter/snow2.png"), url("/img/winter/snow3.png");
+  	z-index: 1;
+  	pointer-events: none;
+  	-moz-animation: snow 10s linear infinite;
+  	-webkit-animation: snow 10s linear infinite;
+  	animation: snow 10s linear infinite;
+}
+
+
+@-moz-keyframes snow {
+  	0% { background-position: 0 0, 0 0, 0 0; }
+  	100% { background-position: 500px 1000px, 0 400px, 0 300px; }
+} @-webkit-keyframes snow {
+  	0% { background-position: 0 0, 0 0, 0 0; }
+  	100% { background-position: 500px 1000px, 0 400px, 0 300px; }
+} @keyframes snow {
+  		0% { background-position: 0 0, 0 0, 0 0; }
+  		100% { background-position: 500px 1000px, 0 400px, 0 300px; }
+}
+
+
+
+hr { border-color: white !important; }

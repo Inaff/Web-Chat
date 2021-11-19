@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'font_headers';
+	src: url("/fonts/Infinity.ttf") format('truetype');
+}
+
+
+html { background: linear-gradient(to right, #FFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: -webkit-linear-gradient(to right, #FFF, #ECE9E6); /* Safari 5.1+, Android 4.3+ */
+}
+
+
+body  {	text-align: center; 
+		letter-spacing: 1px;
+		color: #111; }
+
+
+
+#login_cont {
+    	margin: 0 auto;
+	padding: 10% 0 0 0;
+    	max-width:484px; 
+	min-height: 100px; 
+
+	font: 100% sans-serif;
+	font-weight: 100; 
+	color: #000;  }
+
+		#login_cont p { 	margin-top: 12px; 
+						-webkit-font-smoothing: antialiased; }
+
+
+
+form, p, span, h1 { 
+	display: inline-block;
+    	margin: 0;
+    	padding:0; }
+
+	h1 { 	font: 700% 'font_headers'; }  /* transform: scale(1, -1); */ 
+
+
+.error { color: #888; }
+
+#enter { 	border: none; 
+		outline: none; 
+		background-color: #fff; /* Safari */ }
+	#enter:active { 	background-color: #CADDE5;  
+				color: #444; }
+
+
+input { outline-color: #6fadca; }
+
+input:-webkit-autofill, /* Remove yellow background color from Chrome's autocomplete */
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}

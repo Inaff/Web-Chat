@@ -1,0 +1,328 @@
+/*** GLOBAL ***/
+
+html, body {
+	min-height: 100%;
+	width: 100%; }
+
+	html { 
+    		//box-shadow: inset 0 0 125px #252525;
+    		background-repeat: no-repeat;
+    		background-attachment: fixed; 
+
+		}  body {  overflow-y: scroll;
+			height: 100vh; /* Firefox fix */
+			text-align: center;
+			margin: 0; }	
+
+
+@media print { a:after { content: " [" attr(href) "] "; } } /* Display URLs in printed webpage */
+
+
+
+
+
+/*** ANIMATIONS ***/
+
+/* Stop-motion character */
+@keyframes minion {
+	100% { left: 110%; }
+} @keyframes minion_walk {
+	0% { transform: rotate(-10deg); }
+	49.99% { transform: rotate(-10deg); }
+	50% { transform: rotate(15deg); }
+	100% { transform: rotate(15deg); }
+} 
+
+@keyframes minion_spin { 
+	/*	49.99% { transform: rotateY(0deg); }
+		50% { transform: rotateY(180deg); }
+	*/
+}
+
+.minion { 
+	pointer-events: none;
+	left: -20%; 
+	top: 77%;
+	position: fixed; 
+	display: block;
+	background: url("/img/anim/minion_c.png") no-repeat;
+	background-size: contain;
+	height: 307px; 
+	width: 103px;
+	
+	animation: 4.5s minion 1 steps(8), .5625s minion_walk infinite steps(8), 2.52s minion_spin 1 steps(8);
+	z-index: 9999; }
+/*end*/
+
+
+/* Stop-motion cubes */
+@keyframes anim_left {
+	100% { left: 0%; transform: rotate(160deg); top: 12%; }
+} @keyframes anim_m_left {
+	100% { left: 15%; transform: rotate(240deg); top: 6%; }
+} @keyframes anim_m_right {
+  	100%  { right: -15%; transform: rotate(75deg); top: 4%; }
+} @keyframes anim_right {
+  	100%  { right: -50%; transform: rotate(75deg); top: 7%; }
+} 
+
+.stop_motion_cont { pointer-events: none;
+	left: 45%; 
+	top: 1%;
+	position: fixed; 
+
+	height: 100%; 
+	width: 60px;
+	
+	z-index: 9999; }
+
+.square_left { left: 20%; top: 0;
+	height: 6px;
+	width: 6px;
+	background-color: #6c5d91;
+
+	position: absolute;
+	margin: auto; 
+
+	/* 1 */
+ 	animation: 1.8s anim_left 1 steps(4);
+	transform: rotate(10deg);
+} .square_m_left { 
+	left: 25%; 
+	top: 2%;
+	height: 6px;
+	width: 6px;
+	background-color: #555;
+
+	position: absolute;
+	margin: auto; 
+
+	/* 1 */
+ 	animation: 1.8s anim_m_left 1 steps(4);
+	transform: rotate(10deg);
+} .square_m_right { right: -5%; top: 0; background-color: #E5D299;
+	height: 7px;
+	width: 7px;
+	
+	position: relative;
+	margin: auto; 
+
+	/* 1 */
+ 	animation: 1.8s anim_m_right 1 steps(4);
+	transform: rotate(10deg);
+} .square_right { 
+	right: -10%; 
+	top: 0; 
+	background-color: #003366;
+	height: 8px;
+	width: 8px;
+	
+	position: relative;
+	margin: auto; 
+
+	/* 1 */
+ 	animation: 1.8s anim_right 1 steps(3);
+	transform: rotate(10deg);
+}
+
+
+/* Typing notification bar */
+hr {
+	display: none;
+	position: absolute;
+	width: 100%;
+	margin: 0; }
+
+	hr.right {	
+		filter: invert(30%);
+		left: auto;
+		right: 0px; 
+		top: 33em;
+		border-color: #3953a4; }
+
+	hr#thread { 
+  		animation:         thread2 6s infinite;	
+	}
+
+	@keyframes thread2 {
+	  	0%   { width: 0%; }
+	  	30% { width: 100%; }
+	  	50% { width: 100%;}
+	  	100%{ width:0%;}
+	}
+
+
+
+
+
+
+
+/*** ELEMENTS are all arranged sequentially ***/
+.glob_menu_wrap { 
+	width: 100%; 
+	left: 0; 
+	position: fixed; 
+	z-index: 9998; 
+	padding: 5px 0 5px 0; }
+
+	.glob_menu { 
+		margin: 0 4px 0 4px;
+		position: relative;   
+		top: 50%; }
+
+			.version {  float: left; 
+		 			display: inline-block; }
+			.MoTD { cursor: pointer; }
+			.logout 	{ float:right; }
+
+
+#ext_wrapper_def { 
+    	display: flex;
+  	height:calc(100% - 32px);
+  	justify-content: center; 
+  	align-items: center; 
+
+ 	/* position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	min-width: 100%; */ }
+
+	#ext_wrapper_bot {
+		position: fixed;
+  		top: 102%;
+  		left: 50%;
+  		transform: translate(-50%, -102%); /* Must be 102% to stick it to the bottom without going offscreen */
+		min-width: 100%; }
+
+#wrapper { 
+	display: inline-block;
+	position: relative;
+	max-width: 95.5%; /* Specific value is just nitpicking at keeping background visible at big widths */
+    	resize: both;
+    	overflow:auto; /* something other than visible */
+	margin: 4px; 
+
+	min-width: 280px; /* Changing these values will also require changing the values in #chatbox */
+		width: 400px;
+	min-height: 420px;
+		height: 520px; 
+	max-height: 96vh; /* Not 100 because of #wrapper padding. Prevents resizing offscreen */
+    	padding: 15px; 
+	text-align: center; /* margin: auto; */
+	margin-top: 2%; /* Allow to reach top and bottom of screen on resize. Alt 8% */ }
+
+		#wrapper:active { z-index: 999; }
+  
+	#menu { padding: 5px 25px 12.5px 25px; }
+		.welcome 	{ float:left; }
+
+	#chatbox {
+		overflow-wrap: break-word;
+    		text-align: left;
+
+    		margin: 0 auto;
+    		margin-bottom:25px;
+    		padding:10px; /* Chat text */
+		min-height: 300px;
+			height: 70%;
+		min-width: 160px;
+    			width: 90%;
+
+    		overflow: auto; }
+
+			#submitmsg { margin: 0 !important; }
+			#usermsg { width:80%; margin: 0 !important;}
+				#usermsg:active { background-color: white; } /* Overrides other button active and input active coloring */ 
+
+			#msg { display: block; }
+			#msg img:not(:first-child) { 	display: block;
+									max-width: 100%;
+									max-height: 10%; }
+
+			#msg iframe { 	display: block; }
+				
+
+form, p, span { display: inline-block !important;
+    margin: 0;
+    padding:0; }
+
+form { width: 100%; }
+
+
+
+
+input, button { outline: none; } /* Prevents default OS glow */
+
+button, input { margin: 0 9px 0 0 !important; } /* FIGURE OUT WHY IMPORTANT IS NEEDED */
+
+#msg { 	color: #222; 					/* TRANSFER TO THEMES FOLDER */
+		font: 84% arial; 
+		margin:0 0 2px 0; }
+
+			#msg img:first-child { 	height: 17px; 
+								width: 17px; }
+
+
+
+
+
+
+
+#checkbox_id { display: none; }
+label { float: right; margin: 0 6px 4px 0; }
+/* input {  	padding: 3px 10px;
+		border: 0;
+ 		background-color: rgba(255, 255, 255, 0.9);  } */
+
+
+
+/* input[type="checkbox"] + label:before {
+  	border: 1px solid #333;
+  	content: "\00a0";
+  	display: inline-block;
+  	font: 16px/1em sans-serif;
+ 	height: 16px;
+  	margin: 0 .25em 0 0;
+  	padding: 0;
+  	vertical-align: top;
+  	width: 16px;
+} */
+
+input[type="checkbox"]:checked + label:before {
+	display: none;
+  	background: #fff;
+  	color: #333;
+  	content: "\2713";
+  	text-align: center;
+}
+input[type="checkbox"]:checked + label:after {
+	display: none;
+ 	font-weight: bold;
+}
+ 
+ 
+
+
+a[href^="http://"] {
+	color: red;
+}
+
+
+
+
+.modal_cont {	cursor: pointer;  
+			display: block; 
+			width: 100%;
+			height: 100%;
+			transition: all .3s linear !important ;
+			background-color: rgba(0, 0, 0, 0.75); }
+
+.modal_img { 	position: fixed;
+			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%); 
+
+			width: auto; 
+			height: auto;
+			max-height: 100% !important; }

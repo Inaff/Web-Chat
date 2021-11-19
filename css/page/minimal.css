@@ -1,0 +1,72 @@
+@font-face {
+	font-family: 'font_headers';
+	src: url("../fonts/Infinity.ttf") format('truetype');
+} @font-face {
+	font-family: 'font_light';
+	src: url("../fonts/Folio Light.ttf") format('truetype'); }
+
+
+html, body {
+	margin: 0;
+	min-height: 100%;
+	width: 100%; }
+
+	html { all: initial; background-color: white !important; }
+
+		}  body { 
+			text-align: center;
+			color: white;
+			font: 15px 'font_light', sans-serif; }	
+
+
+
+
+	#chatbox {
+		padding: 0;
+		min-width: 100%;
+		min-height: 94%;
+		overflow-wrap: break-word;
+    		text-align: left;
+    		margin: 0 auto;
+
+    		background: white;
+		/* height: 88%;
+    		width: 90%; UNKNOWN */ }
+
+		form { min-width: 100%; }
+
+ 	 #usermsg { height: 6%; width:80%;  }
+  
+  
+	#msg { 	color: #222; 
+			font: 13px arial;
+			margin:0 0 2px 0; }
+
+				#msg img:first-child { 	height: 16px; 
+									width: 16px; }
+.minimal_hr {
+	all: initial;
+	display: none;
+ 	right: 0; 
+	top: 0; 
+	position: fixed; 
+	border-left:2px solid #000; 
+	margin-right: 4px; 
+	opacity: 0.3; 
+
+	border-color:#3953a4;
+	-webkit-animation: thread2 6s infinite;
+  	-moz-animation:    thread2 6s infinite;
+  	-o-animation:      thread2 6s infinite;
+  	animation:         thread2 6s infinite;	
+}
+@-webkit-keyframes thread2 { 0% { width: 100%; } 50% { width: 100%; } 80% { width: 0px; } 100% { width:100%;}
+} @-moz-keyframes thread2 { 0% { width: 100%; } 50% { width: 100%; } 80% { width: 0px; } 100% { width:100%;}
+} @-o-keyframes thread2 { 0% { width: 100%; } 50% { width: 100%; } 80% { width: 0px; } 100% { width:100%; } }
+
+	@keyframes thread2 {
+	  	0%   { height: 0%; }
+	  	30% { height: 35%; }
+	  	50% { height: 35%;}
+	  	100% { height:0%;}
+}

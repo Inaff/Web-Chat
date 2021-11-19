@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'font_headers';
+	src: url("/fonts/Infinity.ttf") format('truetype');
+} @font-face {
+	font-family: 'font_light';
+	src: url("/fonts/FolioLight.ttf") format('truetype'); }
+
+@keyframes loading {
+	0% { opacity: 0;}
+	100% { opacity: 1; }
+}
+
+html { background-color: #eee; }
+body {	background: linear-gradient(to right, #FFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+		background: -webkit-linear-gradient(to right, #FFF, #ECE9E6); /* Safari 5.1+, Android 4.3+ */
+
+		animation: loading 1s ease-in; 
+		font: 100% 'font_light', sans-serif; }
+
+
+
+.glob_menu_wrap { 	background: linear-gradient(to right, rgba(236,233,230, .3), rgba(255, 255, 255, .3)); 
+				padding: 0 0 0 0; }
+
+					.glob_menu { 	font: 96% sans-serif; 
+								font-weight: 100;    
+								-webkit-font-smoothing: subpixel-antialiased; /* Fix Safari font-weight */ }
+
+
+#wrapper { 	box-shadow: 0 0 9px #818181; 
+			background-color: rgba(255, 255, 255, 0.8); } 
+
+	#chatbox {     	background: #fff; // #aaa NM }
+
+			#msg img:not(:first-child):hover { 	opacity: .5;
+										transition: .4s ease; }
+
+		#submitmsg { 	font-family: "Times New Roman", Georgia, serif; }
+
+
+a { 	color: #2A5DB0; } /* https://gigaom.com/2009/07/09/when-it-comes-to-links-color-matters/ */
+a:visited { color: #609; }
+
+.version { 	color: #555 !important; 
+		text-decoration: none; }
+
+.MoTD { text-shadow: 0 5px 15px #ddd; }
+.logout { color: #000 !important; text-decoration: none;  }
+
+
+
+
+
+
+::selection {
+  	background: #B4D9E1; } 
+::moz-selection { background: #B4D9E1; }
+
+button, input {	background-color: #fff; /* Also specified for Safari */
+			color: black; 
+			
+    			border: none; }
+	button:active, input:active { background-color: #CADDE5; color: #444; }
+
+
+#usermsg { outline-width: thin; border: solid 1px; border-color: #ccc; }
+	#usermsg:focus { box-shadow: 0 0 5px 3px #B9CCD4; }
+
+#submitmsg { 	padding: 1px  4px 1px 4px; 		/* background: rgb(243,243,243); */     
+			font-family: "Times New Roman", Times, serif;
+}

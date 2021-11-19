@@ -1,0 +1,56 @@
+@font-face {
+	font-family: 'font_headers';
+	src: url("/fonts/Infinity.ttf") format('truetype');
+} @font-face {
+	font-family: 'font_light';
+	src: url("/fonts/FolioLight.ttf") format('truetype'); }
+
+
+html { 	background: #355C7D;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+body { font: 100% 'font_light', sans-serif; }
+
+
+
+.glob_menu { 	background-color: rgba(225, 255, 255, 0.1);
+			font-family: palatino, serif; }
+
+
+#wrapper { 	box-shadow: 0 0 6px #888; 
+			background-color: rgba(255, 255, 255, 0.5); } 
+
+	#chatbox {     	background: #fff; // #aaa NM }
+
+
+
+
+
+
+button, input {	background-color: #fff; color: black;
+    			border: none; }
+	button:active, input:active { background-color: #355C7D; color: white; }
+
+
+#usermsg:focus 	{ 	 border-color: #ffdbdb; 
+					 box-shadow: 0 0 5px 3px #ffdbdb; }
+
+
+
+.version 	{ color: #eee; } /* #ffdbdb */
+.welcome 	{ color: #000; }
+.logout 		{ color: #000; text-decoration: none;  }
+.logout:visited 	{ color: #00; }
+
+
+
+/* 
+  * Login page / index.php 
+  */
+
+#loginform { 	font: 100% "font_light"; 
+			color: #662B39; 
+			background-color: rgba(255, 255, 255, 0.8); }
+
+.error { color: yellow; }
